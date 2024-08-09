@@ -61,8 +61,8 @@
 #pragma config BSLIM = 8191    //Boot Segment Flash Page Address Limit bits->8191
 
 // FOSCSEL
-#pragma config FNOSC = PRI    //Oscillator Source Selection->Primary Oscillator (XT, HS, EC)
-#pragma config PLLMODE = DISABLED    //PLL Mode Selection->No PLL used; PLLEN bit is not available
+#pragma config FNOSC = FRC    //Oscillator Source Selection->FRC
+#pragma config PLLMODE = PLL96DIV2    //PLL Mode Selection->96 MHz PLL. Oscillator input is divided by 2 (8 MHz input)
 #pragma config IESO = OFF    //Two-speed Oscillator Start-up Enable bit->Start up with user-selected oscillator source
 
 // FOSC
@@ -71,7 +71,7 @@
 #pragma config SOSCEN = OFF    //SOSC Power Selection Configuration bits->SOSC crystal driver is disabled (RC13/RC14 mode)
 #pragma config PLLSS = PRI    //PLL Secondary Selection Configuration bit->PLL is fed by the Primary oscillator
 #pragma config IOL1WAY = ON    //Peripheral pin select configuration bit->Allow only one reconfiguration
-#pragma config FCKSM = CSDCMD    //Clock Switching Mode bits->Both Clock switching and Fail-safe Clock Monitor are disabled
+#pragma config FCKSM = CSECMD    //Clock Switching Mode bits->Clock switching is enabled and Fail-safe Clock Monitor is disabled
 
 // FWDT
 #pragma config WDTPS = PS32768    //Watchdog Timer Postscaler bits->1:32768

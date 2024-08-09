@@ -16,6 +16,13 @@
         <itemPath>mcc_generated_files/spi1.h</itemPath>
       </logicalFolder>
       <itemPath>DELAY.h</itemPath>
+      <itemPath>extra_fct.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="true">
+      <itemPath>Makefile</itemPath>
+      <itemPath>Test_ecran.mc3</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -37,12 +44,7 @@
       </logicalFolder>
       <itemPath>main.c</itemPath>
       <itemPath>DELAY.c</itemPath>
-    </logicalFolder>
-    <logicalFolder name="ExternalFiles"
-                   displayName="Important Files"
-                   projectFiles="false">
-      <itemPath>Makefile</itemPath>
-      <itemPath>Test_ecran.mc3</itemPath>
+      <itemPath>extra_fct.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -224,6 +226,9 @@
       <PKOBSKDEPlatformTool>
         <property key="firmware.download.all" value="false"/>
       </PKOBSKDEPlatformTool>
+      <Tool>
+        <property key="firmware.download.all" value="false"/>
+      </Tool>
     </conf>
   </confs>
 </configurationDescriptor>

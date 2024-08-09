@@ -81,7 +81,7 @@ void PIN_MANAGER_Initialize (void)
     TRISA = 0xC4FE;
     TRISB = 0xAFFF;
     TRISC = 0x701E;
-    TRISD = 0xFEFF;
+    TRISD = 0xFEEF;
     TRISE = 0x031F;
     TRISF = 0x31BF;
     TRISG = 0xF3CF;
@@ -150,10 +150,11 @@ void PIN_MANAGER_Initialize (void)
      ***************************************************************************/
     __builtin_write_OSCCONL(OSCCON & 0xbf); // unlock PPS
 
-    RPINR20bits.SDI1R = 0x0003;    //RD10->SPI1:SDI1
     RPINR20bits.SCK1R = 0x0004;    //RD9->SPI1:SCK1
     RPOR2bits.RP4R = 0x0008;    //RD9->SPI1:SCK1
     RPOR1bits.RP2R = 0x0007;    //RD8->SPI1:SDO1
+    RPINR20bits.SDI1R = 0x0003;    //RD10->SPI1:SDI1
+    RPOR12bits.RP25R = 0x001C;    //RD4->INTERNAL OSCILLATOR:REFO
 
     __builtin_write_OSCCONL(OSCCON | 0x40); // lock PPS
     
